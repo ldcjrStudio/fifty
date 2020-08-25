@@ -13,7 +13,6 @@
   width: 303px;
   height: 63px;
   background-image: url(squiggle.svg);
-  /* this will contain the background image inside the edges of our box */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -97,4 +96,23 @@
 .squiggle:nth-of-type(8) {
   right: 0%;
   bottom: 5%;
+}
+
+@media (max-width: 640px) {
+  .circle {
+    height: 50px;
+    width: 50px;
+    background-color: #ffeecf;
+    border-radius: 100%;
+  }
+
+  .squiggle {
+    width: 144px;
+    height: 30px;
+    background-image: url(squiggle.svg);
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

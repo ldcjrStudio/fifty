@@ -47,7 +47,8 @@ div.container {
 }
 
 .intro {
-  background-image: url("intro.jpg");
+  background-image: url("intro3.jpg");
+  background-position: bottom left;
 }
 
 .intro p {
@@ -90,36 +91,32 @@ section .intro {
 .marquee {
   color: white;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
   width: 100%;
-  font-size: 5vw; /*each character is 5% of of the viewport width*/
+  font-size: 5vw;
   line-height: 1;
   overflow: hidden;
-  mix-blend-mode: difference; /*makes it so the banner offsets the color of the background it's on*/
+  mix-blend-mode: difference;
   margin-bottom: 24px;
 }
 
 .marquee span {
-  /*this is the shorthand (brief) version of the animation CSS rule*/
   animation: moveLeft 200s infinite;
-  /*this is to make sure all text stays on the same line*/
   white-space: nowrap;
-  /*our span is inline by default*/
   display: block;
-  /*this will let us add our animation*/
   position: relative;
 }
 
 .mix-difference {
-  /* white-space: wrap; */
   mix-blend-mode: difference;
 }
 
 .day {
   text-align: center;
   position: relative;
-  overflow: hidden; /*to make sure the shapes  dont go outside their box*/
+  overflow: hidden;
 }
 
 .day .container {
@@ -128,15 +125,16 @@ section .intro {
 }
 
 .day-1 {
-  background-color: #fd76a7;
+  background-color: #ef2a33;
 }
 
 .day-2 {
-  background-color: #1bb190;
+  background-color: #0a81ff;
 }
 
 .day-3 {
-  background-image: url(day-3.jpg);
+  background-image: url(outro1.jpg);
+  color: white;
 }
 
 .lineup {
@@ -174,6 +172,7 @@ ul {
   background-position: center;
   position: absolute;
   left: 50%;
+  transform: translateX(-32px);
   bottom: 3vh;
   width: 64px;
   height: 32px;
@@ -185,7 +184,6 @@ ul {
 
 @media (max-width: 860px) {
   .marquee {
-    position: relative;
     top: auto;
     left: auto;
     width: 90vw;

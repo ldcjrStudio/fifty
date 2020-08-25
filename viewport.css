@@ -1,6 +1,3 @@
-/* we are running our viewport transitions only on wider screens
-so that have more confidence they will run properly (as fade/scroll
-linked transitions on mobile can be patchy) */
 @media (min-width: 640px) {
   .shape,
   .lineup li,
