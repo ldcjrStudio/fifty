@@ -1,0 +1,211 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translatey(20px);
+  }
+
+  50% {
+    transform: translatey(0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translatex(0);
+  }
+
+  100% {
+    transform: translatex(-3000vw);
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+}
+/* CSS Document */
+
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+div.container {
+  max-width: 810px;
+  margin: auto;
+  position: relative;
+  height: 100%;
+}
+
+.intro {
+  background-image: url("intro.jpg");
+}
+
+.intro p {
+  font-size: 36px;
+  line-height: 1.2;
+  color: white;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 112px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.appear {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+section .intro {
+  position: relative;
+}
+
+.marquee {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 5vw; /*each character is 5% of of the viewport width*/
+  line-height: 1;
+  overflow: hidden;
+  mix-blend-mode: difference; /*makes it so the banner offsets the color of the background it's on*/
+  margin-bottom: 24px;
+}
+
+.marquee span {
+  /*this is the shorthand (brief) version of the animation CSS rule*/
+  animation: moveLeft 200s infinite;
+  /*this is to make sure all text stays on the same line*/
+  white-space: nowrap;
+  /*our span is inline by default*/
+  display: block;
+  /*this will let us add our animation*/
+  position: relative;
+}
+
+.mix-difference {
+  /* white-space: wrap; */
+  mix-blend-mode: difference;
+}
+
+.day {
+  text-align: center;
+  position: relative;
+  overflow: hidden; /*to make sure the shapes  dont go outside their box*/
+}
+
+.day .container {
+  position: relative;
+  z-index: 2;
+}
+
+.day-1 {
+  background-color: #fd76a7;
+}
+
+.day-2 {
+  background-color: #1bb190;
+}
+
+.day-3 {
+  background-image: url(day-3.jpg);
+}
+
+.lineup {
+  text-align: center;
+}
+.date {
+  font-size: 28px;
+  color: #ffeecf;
+  margin-bottom: 48px;
+  line-height: 1;
+}
+
+.lineup h2 {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.lineup p {
+  font-size: 21px;
+}
+
+.lineup li {
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.scroll-to {
+  background-image: url(down-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  width: 64px;
+  height: 32px;
+}
+
+.scroll-to-intro {
+  background-image: url(down-arrow-light.svg);
+}
+
+@media (max-width: 860px) {
+  .marquee {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 90vw;
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    max-width: 64px;
+    margin-bottom: 24px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  .scroll-to {
+    display: none;
+  }
+
+  .lineup h2 {
+    font-size: 30px;
+  }
+}
